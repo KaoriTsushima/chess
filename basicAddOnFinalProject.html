@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/088/015/original/chess_pattern.jpg?1688393864");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        font-size: 50pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      h2 {
+        font-size: 30pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .container {
+        background: white;
+        text-align: center;
+        max-width: 800px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .theme {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+        background: black;
+        transition: all 150ms ease-in-out;
+      }
+      .theme:hover {
+        color: black;
+        background: white;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .chessText {
+        text-align: justify;
+        margin: 15px;
+      }
+      .play {
+        font-size: 20pt;
+        font-weight: 600;
+        color: rgba(83, 6, 6, 0.9);
+        background: bisque;
+        padding: 15px 30px;
+        border-radius: 20px;
+        transition: all 150ms ease-in-out;
+        margin-bottom: 30px;
+      }
+      .play:hover {
+        color: bisque;
+        background: rgba(83, 6, 6, 0.9);
+        cursor: pointer;
+      }
+      .footer {
+        padding: 0 0 15px 0;
+      }
+      .chess-main-pic {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .chess-main-pic:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+      }
+      .grid img {
+        width: 100%;
+        height: 100%;
+        transition: all 200ms ease-in-out;
+      }
+      .grid img:hover {
+        opacity: 0.7;
+      }
+      .dark {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/088/016/original/seamless-pattern-with-chess-pieces_1085-1839.jpg?1688394352");
+        color: blanchedalmond;
+      }
+      .dark .container {
+        background: #6e483c;
+      }
+      .dark a {
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Change Theme</button>
+    <div class="container">
+      <h1>Chess</h1>
+      <h2><em>My favourite hobby</em></h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/977/original/chessMain.jpg?1688381236"
+        alt="Chess main"
+        class="chess-main-pic"
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/978/original/chess1.jpg?1688381254"
+          alt="chess1"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/979/original/chess2.jpg?1688381262"
+          alt="chess2"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/980/original/chess3.jpg?1688381268"
+          alt="chess3"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/981/original/chess4.jpg?1688381276"
+          alt="chess4"
+        />
+      </div>
+      <div class="chessText">
+        Chess is a board game for two players, called White and Black, each
+        controlling an army of chess pieces in their color, with the objective
+        to checkmate the opponent's king. It is sometimes called international
+        chess or Western chess to distinguish it from related games, such as
+        xiangqi (Chinese chess) and shogi (Japanese chess). The recorded history
+        of chess goes back at least to the emergence of a similar game,
+        chaturanga, in seventh century India. The rules of chess as we know them
+        today emerged in Europe at the end of the 15th century, with
+        standardization and universal acceptance by the end of the 19th century.
+        Today, chess is one of the world's most popular games, played by
+        millions of people worldwide.
+        <br />
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Chess">
+          Learn more about Chess on Wikipedia
+        </a>
+      </div>
+      <button class="play">Play Chess</button>
+      <div class="footer">
+        coded by <strong><em>Kaori Tsushima</em></strong>
+      </div>
+    </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
